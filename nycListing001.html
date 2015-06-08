@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NYC Listing 001</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" media="all">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+	<script>
+	$(function() {
+    	$( ".datepicker" ).datepicker();
+    });
+	    $(document).ready(function(){
+	        $("#howIt").bind("click", function(){
+	        	$("#collapseDiv").fadeIn("slow");
+	    	});
+	        
+	        $("#remove").bind("click", function(){
+	        	$("#collapseDiv").fadeOut("slow");
+	    	});
+	        
+			$(window).scroll( function(){
+	        /* Check the location of each desired element */
+	        	$('.scrollCommunity').each( function(i){  
+	            	var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+	            	var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            /* If the object is completely visible in the window, fade it it */
+	            	if( bottom_of_window > bottom_of_object ){  
+	                	$(this).animate({'opacity':'1'},500);       
+	            	}
+	        	}); 
+	    	});  
+
+	    	$('#startd, #endd, #sel1').bind('keyup', function() {
+	    		if(allFilled()) $('#req').removeAttr('disabled');
+	    	});
+
+	    	function allFilled() {
+	    		var filled = true;
+	    		$('#reqForm input').each(function() {
+	    			if($(this).val() == '') filled = false;
+	    		});
+	    		return filled;
+	    	}
+
+		});
+  	</script>
+  	<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 40%;
+      margin: auto;
+  }
+  </style>
+</head>
+<body>
+
+	<div id="collapseDiv">
+		<div class="container">
+			<div class="removeIcon">
+				<a href="#" id="remove">
+					<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<img src="images/capture.jpg" alt="Generic placeholder image" width="140" height="200">
+              		<h3>Discover Amazing Places</h3>
+              		<p>Find hosts with extra rooms, entire homes, and unique accommodations like castles and igloos.</p>
+            	</div>
+
+            	<div class="col-md-4" >
+              		<img src="images/capture1.jpg" alt="Generic placeholder image" width="140" height="200">
+              		<h3>Book a Stay</h3>
+              		<p>Connect with hosts, confirm travel dates, and pay—all through Airbnb’s trusted services.</p>
+            	</div>
+
+            	<div class="col-md-4">
+	            	<img src="images/capture2.jpg" alt="Generic placeholder image" width="140" height="200">
+	              	<h3>Travel</h3>
+	              	<p>Feel at home, anywhere you go in the world. Learn more about how to travel on Airbnb.</p>
+          		</div>
+         	</div><!-- row div ends-->
+
+         	<div class="row">
+         		<div class="col-md-12">
+         			<p>Learn more about hosting on Airbnb and show your guests they’re right where they belong.</p>
+          		</div>
+         	</div><!-- row div ends-->
+        </div><!-- container community div ends-->  
+	</div><!-- collapse div ends-->
+
+	<div class="header" id="header_listing">
+		<nav class="navbar">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	        </div><!-- navbar header div ends-->
+	        <div class="collapse navbar-collapse" id="myNavbar">
+	          <ul class="nav navbar-nav">
+	          	<li><a href="customerHome.html"> <img src="images/logo.png"> </a></li>
+            	<li><a href="#"><span class="glyphicon glyphicon-envelope"><span class="badge">4</span></span></a></li>
+            	<li><a href="#"><span class="glyphicon glyphicon-globe"><span class="badge">2</span></a></li>
+	        <!-- <li><a href="#sec1" data-toggle="modal" data-target="#login_modal"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+	            <li><a href="#sec2" data-toggle="modal" data-target="#signup_modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#collapseDiv" id="howIt">How it Works</a></li>
+            	<li><a href="listyourSpace.html">List your space</a></li>
+				<li><a href="index.html"> Log Out</a></li>
+	          </ul>
+	        </div><!-- collapse navbar-collapse div ends-->
+	      </div><!-- container div ends-->
+	    </nav>
+	</div>
+
+
+		<!-- carousal starts here-->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/listing002-01.jpg" alt="Chania">
+        <div class="carousel-caption">
+        <p>Victorian Home, Parkside Neighborhood</p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="images/listing002-02.jpg" alt="Chania">
+        <div class="carousel-caption">
+        <p>Entrance</p>
+      </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/listing002-03.jpg" alt="Flower">
+        <div class="carousel-caption">
+        <p>Queen Bed with fresh linens and duvet</p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="images/listing002-04.jpg" alt="Flower">
+        <div class="carousel-caption">
+        <p>Open Dining, Living and Kitchen areas</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+	<div class="container">
+		<div class="body_left">
+			<div class="info_l">
+				<br>
+				<img src="images/info_l.jpg" align="left">
+			</div>
+			<div class="info_r">
+				<h2>Dreamy studio apt</h2>
+				<p>New York, NY, United States</p>
+				<img src="images/1bed.jpg">
+			</div>
+				<hr>
+			<div class="listing">
+				<h3>About This Listing</h3>
+				<br>
+				<p>My peaceful and quiet studio apartment in a landmarked building in the Upper East Side is available for long-term rental. The studio features wifi, a separate kitchen, tons of closet space and is steps away from parks, restaurants and shops.</p>
+				<br>
+				<a href="#" data-toggle="modal" data-target="#contact_modal">Contact Host</a>
+					<hr>
+			</div>
+
+			<div class="row">
+	      		<div class="col-md-3">
+	          		<div class="text-muted">
+	      				The Space
+	    			</div><!--text muted div ends-->
+	    		</div><!--col-md-3 div ends-->
+
+	      		<div class="col-md-9">
+	        		<div class="row">
+	            		<div class="col-md-6">
+	               			<div>Bed type: <strong>Real Bed</strong></div>
+					            <div>Property type: <strong>Apartment</strong></div>
+				                <div>Accommodates: <strong>2</strong></div>
+				                <div>Bedrooms: <strong>0</strong></div>
+	            			</div><!--col-md-6 div ends-->
+	            			<div class="col-md-6">
+	            				<div>Bathrooms: <strong>1</strong></div>
+	            				<div>Beds: <strong>1</strong></div>
+	            				<div>Check In: <strong>3:00 PM</strong></div>
+								<div>Check Out: <strong>12:00 PM</strong></div>
+	            			</div><!-- col-md-6 div ends-->
+	        			</div><!-- row div ends-->
+	      			</div><!-- col-md-9 div ends-->
+	    		</div><!-- row div ends-->
+
+	    		<hr>
+
+	    		<div class="row amenities">
+	  				<div class="col-md-3 text-muted">
+						Amenities
+					</div><!-- col-md-3 text-muted div ends-->
+
+					<div class="col-md-9">
+					<div class="expandable-content-summary">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="row-space-1">
+									<i class="icon h3 icon-internet"></i>
+									&nbsp;
+									<span id="amenity-short-tooltip-trigger-3">
+										Internet
+									</span>
+								</div><!-- row-space-1 div ends-->
+
+								<div class="row-space-1">
+									<i class="icon h3 icon-heating"></i>
+									&nbsp;
+									<span id="amenity-short-tooltip-trigger-30">
+										Kitchen
+									</span>
+								</div><!-- row-space-1 div ends-->
+
+								<div class="row-space-1">
+									<i class="icon h3 icon-washer"></i>
+									&nbsp;
+									<span id="amenity-short-tooltip-trigger-33">
+										Essentials
+									</span>
+								</div><!-- row-space-1 div ends-->
+							</div><!-- col-sm-6 div ends-->
+
+							<div class="col-sm-6">
+								<div class="row-space-1">
+									<i class="icon h3 icon-dryer"></i>
+									&nbsp;
+									<span id="amenity-short-tooltip-trigger-34">
+										Dryer
+									</span>
+								</div><!-- row-space-1 div ends-->
+
+								<div class="row-space-1">
+									<i class="icon h3 icon-wifi"></i>
+									&nbsp;
+									<span id="amenity-short-tooltip-trigger-4">
+										Heater
+									</span>
+								</div><!-- row-space-1 div ends-->
+							</div><!-- col-sm-6 div ends -->
+						</div><!-- row div ends-->
+					</div><!-- expandable-content-summary div ends-->
+				</div><!-- col-md-9 div ends-->
+				</div><!-- row amenities div ends-->
+
+				<hr>
+
+				<div class="row">
+	    			<div class="col-md-3">
+	    				<div class="text-muted">
+	    					Prices
+	    				</div><!-- col-md-3 div ends-->
+	    			</div><!-- row div ends-->
+
+	    			<div class="col-md-9">
+	    				<div class="row">
+	    					<div class="col-md-6">
+	    						<div>Extra people: <strong><span id="localized_people_pricing_description_string">No Charge</span></strong></div>
+	    						<div>Cleaning Fee: <strong><span id="extras_price_string">$40</span></strong></div>
+	    					</div><!-- col-md-6 div ends-->
+
+	    					<div class="col-md-6">
+	    						<div>Weekly Price: <strong><span id="weekly_price_string">$800</span> /week</strong></div>
+	    						<div>Month Price: <strong><span id="weekly_price_string">$2250</span> /month</strong></div>
+	    						<div>Cancellation: <strong>Strict</strong></div>
+	    					</div><!-- col-md-6 div ends-->
+	    				</div><!-- row div ends--><!-- row div ends-->
+	    			</div><!-- col-md-9 div ends-->
+	    		</div><!-- row div ends-->
+
+	    		<hr>
+
+	    		<div class="row description">
+	    			<div class="col-md-3 text-muted">
+	    				Description
+	    			</div><!-- col-md-3 text muted div ends -->
+
+	    			<div class="col-md-9">
+	    				<p><strong>The Space</strong></p>
+	    				<p>Cozy, clean, and super peaceful studio apartment in a great, safe neighborhood</p>
+
+	    				<p>Full-sized bed with comfy bedding</p>
+
+	    				<p>We would love to try to accommodate last minute bookings and late arrivals. <strong><a href="#" data-toggle="modal" data-target="#contact_modal">Contact us</a> </strong>to see what we can do!</p>
+	    				<p>Separate kitchen equipped with a microwave, gas stove and oven, and all of the dishware, pots and pans and utensils that you'll need</p>
+	    				<p>Southern exposure with tons of sunlight throughout the day </p>
+	    				<p>High-speed WiFi and all utilities such as heating, water, and electricity are included</p>
+	    				
+	    				<p><strong>The Neighborhood</strong></p>
+	    				<p>-Located in a very safe and charming area in the Upper East Side <br />-Walking distance to a number of parks including Carl Schurz Park and Central Park as well as museums and other points of interest in NYC <br />-Steps away from countless restaurants, cafes, bars, and shopping <br />-Convenient access to the M79 bus which is located directly across the street from the apartment</p>
+	    				<p><strong>Getting around</strong></p>
+	    				<p>-The M79 bus stop is directly across the street from the apartment and other nearby lines include the M15 and M31 <br />-The 6 train is about a 12-15 min walk from the apartment <br />-Off-street parking is available</p>
+
+
+	    			</div><!-- col-md-9 div ends-->
+	    		</div><!-- row description div ends-->
+
+	    		<hr>
+
+	    		<div class="row description">
+	    			<div class="col-md-3 text-muted">
+	    				House Rules
+	    			</div><!-- col-md-3 text muted div ends -->
+
+	    			<div class="col-md-9">
+	    				<p>-This is a non-smoking apartment <br />-You&#x27;re welcome to have guests over but please refrain from having loud parties :)</p>
+	    			</div><!-- col-md-9 div ends-->
+	    		</div><!-- row description div ends-->
+
+			</div><!-- body_left div ends-->
+
+			<div class="body_right">
+				<div class="price"><h3>$175 per night</h3></div>
+				<div class="details">
+							<form action=""  class="form-inline" role="form" id="reqForm">
+								<div id="inp">
+							<div class="form-group">
+								<label for="start_date"></label>
+								<input type="text" class="datepicker form-control" placeholder="Start Date" size="10" readonly id="startd">
+							</div>
+					
+							<div class="form-group">
+								<label for="return_date"></label>
+								<input type="text" class="datepicker form-control" placeholder="Return Date" size="10" readonly id="endd">
+							</div>
+
+				          	<div class="form-group">
+				            	<label for="sel1"></label>
+					            <select class="form-control" id="sel1">
+					            <option>1 </option>
+					            <option>2 </option>
+					            <option>3 </option>
+					            <option>4 </option>
+					            </select>
+				          	</div>
+				          </div>
+				          	<button type="button" class="btn btn-default" id="req" data-toggle="modal" data-target="#book_modal" disabled>Request to Book</button>
+				          	<button type="button" class="btn btn-default" style="width:320px ;height:50px" data-toggle="modal" data-target="#save_modal"><span class="glyphicon glyphicon-heart"></span> Save to Wish List</button>
+						</form>
+			</div><!-- details div ends-->
+		</div><!-- body_right div ends-->
+	</div><!-- container div ends-->
+
+</div>
+		<div id="footer" class="container-brand-dark footer-surround footer-container">
+	    	<div class="footer-content-container page-container-responsive">
+	    		<div class="row row-condensed">
+	          		<div class="col-md-3 col-md-offset-1">
+	            		<div class="language-curr-picker clearfix">
+	            			<div class="select select-large select-block row-space-2">
+				                <select class="language-selector form-control">          
+				                  <option value="de">Deutsch</option>
+				                  <option value="en" selected="">English</option> 
+				                  <option value="es">Español</option>
+				                  <option value="fr">Français</option>
+				                  <option value="it">Italiano</option>
+				                  <option value="pl">Polski</option>
+				                  <option value="pt">Português</option>
+				                  <option value="tr">Türkçe</option>
+				                  <option value="zh-TW">中文 (繁體)</option>
+				                  <option value="ja">日本語</option>
+				                  <option value="ko">한국어</option>
+				              </select>
+	            			</div><!-- select select-large select-block row-space-2 div ends-->
+
+		            		<div class="select select-large select-block row-space-2">
+				             	<select class="currency-selector form-control">
+					                <option value="AUD">AUD</option>
+					                <option value="CHF">CHF</option>
+					                <option value="CNY">CNY</option>
+					                <option value="CRC">CRC</option>
+					                <option value="CZK">CZK</option>
+					                <option value="DKK">DKK</option>
+					                <option value="EUR">EUR</option>
+					                <option value="GBP">GBP</option>
+					                <option value="HKD">HKD</option>
+					                <option value="INR">INR</option>
+					                <option value="JPY">JPY</option>
+					                <option value="USD" selected="">USD</option>
+					                <option value="VND">VND</option>
+					                <option value="ZAR">ZAR</option>
+				            	</select>
+		          			</div><!--select select-large select-block row-space-2 div ends-->
+
+	          				<div class="cx-number"></div>
+	          			</div><!-- language-curr-picker clearfix div ends-->
+	   				</div><!-- col-md-3 col-md-offset-1 div ends-->
+
+	   				<div class="col-md-2 col-md-offset-1 hide-sm">
+	   					<ul style="list-style-type:none">
+	   						<li><h5>Company</h5></li>
+					        <li><a href="#">About</a></li>
+					        <li><a href="#">Careers</a></li>
+					        <li><a href="#">Press</a></li>
+					        <li><a href="#">Blog</a></li>
+					        <li><a href="#">Help</a></li>
+					        <li><a href="#">Policies</a></li>
+					        <li><a href="#">Disaster Response</a></li>
+					        <li><a href="#">Terms &amp; Privacy</a></li>
+					    </ul>
+	    			</div><!-- col-md-2 col-md-offset-1 hide-sm div ends-->
+
+				    <div class="col-md-2 hide-sm">
+				    	<ul style="list-style-type:none">
+				    		<li><h5>Discover</h5></li>
+					        <li><a href="#">Trust &amp; Safety</a></li>
+					        <li><a href="#">Invite Friends</a></li>
+					        <li><a href="#">Airbnb Picks</a></li>
+					        <li><a href="#">Mobile</a></li>
+					        <li><a href="#">Support NYC</a></li>
+					        <li><a href="#">Business Travel</a></li>
+					        <li><a href="#">Site Map</a></li>
+					    </ul>
+				    </div><!-- col-md-2 hide-sm div ends-->
+
+				    <div class="col-md-2 hide-sm">
+				    	<ul style="list-style-type:none">
+				    		<li><h5>Hosting</h5></li>
+					        <li><a href="#">Why Host</a></li>
+					        <li><a href="#">Hospitality</a></li>
+					        <li><a href="#">Responsible Hosting</a></li>
+					        <li><a href="#">Home Safety</a></li>
+					        <li><a href="#">Stories</a></li>
+				      	</ul>
+				    </div><!-- col-md-2 hide-sm div ends-->
+				</div><!-- row row-condensed div ends-->
+			</div><!-- footer-content-container page-container-responsive div ends-->
+		</div><!-- footer div ends-->
+
+	
+  <!-- Contact us Modal -->
+	<div class="modal fade" id="contact_modal" role="dialog">
+   	 <div class="modal-dialog">
+ <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Contact Us</h4>
+				</div><!-- modal-header div ends-->
+        				
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+     			<label class="control-label col-sm-2" for="Name">Name:</label>
+      				<div class="col-sm-10">          
+        					<input type="text" class="form-control" id="name" placeholder="Enter Name">
+      				</div><!-- col-sm-10 div ends-->
+    		</div><!-- form-group div ends-->
+
+    		<div class="form-group">
+    			<label class="control-label col-sm-2" for="email">Email:</label>
+      				<div class="col-sm-10">
+      					<input type="email" class="form-control" id="email" placeholder="Enter email">
+      				</div><!-- col-sm-10 div ends-->
+   			</div><!-- form-group div ends-->
+
+    		<div class="form-group">
+     			<label class="control-label col-sm-2" for="message"> Message:</label>
+      				<div class="col-sm-10">
+      					<textarea class="form-control" rows="5" id="comment" placeholder="Enter Message"></textarea>
+      				</div><!-- col-sm-10 div ends-->
+    		</div><!-- form-group div ends-->
+
+    		<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+       				<button type="submit" class="btn btn-default">Submit</button>
+      			</div><!-- col-sm-offset-2 col-sm-10 div ends-->
+    		</div><!-- form-group div ends-->
+  		  </form>
+    	</div><!-- modal-body div ends-->
+
+       	<div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+
+  <!-- Book Modal -->
+	<div class="modal fade" id="book_modal" role="dialog">
+   	 <div class="modal-dialog">
+ <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Request to Book</h4>
+				</div><!-- modal-header div ends-->
+        				
+        <div class="modal-body">
+          <h2>Booking Request has been submitted!!</h2>
+          <p>Please allow 3-4 days to process</p>
+        </div><!-- modal-body div ends-->
+
+       	<div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.href='customerHome.html'">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+
+<!-- Save Modal -->
+	<div class="modal fade" id="save_modal" role="dialog">
+   	 <div class="modal-dialog">
+ <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" onclick="window.location.href='customerHome.html'">&times;</button>
+				  <h4 class="modal-title">Save to Wishlist</h4>
+				</div><!-- modal-header div ends-->
+        				
+        <div class="modal-body">
+          <h2>Listing has been saved to wishlist!!</h2>
+        </div><!-- modal-body div ends-->
+
+       	<div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+
+</body>
+</html>

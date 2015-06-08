@@ -1,0 +1,330 @@
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:Arial,sans-serif;
+}
+
+.header {
+  height: 300px;
+  background: #79cccd url('http://www.bootply.com/assets/example/pt_topo_l.png') repeat center center fixed;
+}
+
+#header_listing{
+  height: 2%;
+  padding-bottom: 5%;
+}
+
+.form-inline{
+	text-align:center;
+  padding-top: 5%;
+  height: 200px;
+}
+
+
+.form_search .btn {
+   font-size:20px;
+   border-color:#eeeeee;
+   background-color:transparent;
+   color:#ffffff;
+   margin-top: 18px;
+}
+
+
+.main_text h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  text-transform:uppercase;
+}
+
+.main_text h3{
+  color:#fff;
+  text-transform:uppercase;
+}
+.main_text{
+	text-align: center;
+}
+
+.main_text p{
+	font-size:18px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+}
+
+
+.navbar a {
+  color:#ffffff;
+  font-size:14px;
+}
+
+.navbar a:hover, a:focus, a:active{
+  color: #ffffff !important;
+  background-color: #79cccd !important;
+}
+
+.navbar{
+  background-color: #79cccd;
+}
+
+.main_body{
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  background-color: #edefed;
+  padding-top: 10px;
+}
+
+.main_body .container div{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.main_body .container div:last-child{
+  margin-right: none;
+}
+
+#allDest{
+  height:1320px;
+  width: 100%;  
+  text-align: center;
+  background-color: #edefed;
+}
+
+
+#searchall {
+    width: 350px;  height: 40px;
+}
+
+.main_body .butn{
+  margin-top: 10px;
+}
+
+.community{
+  height: 520px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.community .container div{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+#footer{
+  background-color: #2b2d2e;
+  width: 100%;
+  height: 300px;
+  padding-top: 40px;
+  color: #ffffff;
+}
+
+#footer a{
+  color: #ffffff;
+}
+
+.form-control{
+  margin-top: 20px;
+}
+
+
+.scrollCommunity{
+    opacity:0;
+}
+
+#nyc001{
+  display: none;
+}
+
+#portland003{
+  display: none;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 40%;
+      margin: auto;
+  }
+
+#collapseDiv{
+  width: 100%;
+  height: 400px;
+  display: none;
+  background-color: #79cccd;
+  padding-top: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial,sans-serif;
+}
+
+#collapseDiv .row{
+  margin-bottom: 20px;
+}
+
+.removeIcon{
+  width: 100%;
+  height: 20px;
+  text-align: right;
+}
+
+.form-search{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-search .btn{
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.form-search div{
+  margin-top: 15px;
+}
+
+.body_left{
+  width: 60%;
+  float: left;
+  padding-left: 15px;
+}
+
+.body_left .row{
+  margin-bottom: 10px;
+}
+
+.body_left .info_r{
+  text-align: center;
+}
+
+.body_right{
+  width: 40%;
+  height: 350px;
+  float: right;
+  background-color: #CEECF5;
+}
+
+.price{
+  text-align: center;
+  margin-top: 5%;
+}
+
+#req{
+  margin-bottom: 20px;
+  width: 320px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #79cccd;
+}
+
+#inp{
+  margin-bottom: 20px;
+}
+
+.navbar img{
+  width: 80px;
+  height: 30px;
+}
+
+#listSpace {
+   font-size:20px;
+   border-color:#eeeeee;
+   background-color:#79cccd;
+   color: #ffffff;
+}
+
+.pagination_align{
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+
+  .header{
+    height: 300px;
+  }
+
+  .main_body{
+    height: 500px;
+  }
+
+  .main_body .container{
+    height: 310px;
+  }
+
+  .community .container{
+    height: 520px;
+  }
+
+}
+
+@media screen and (min-width:420px) and (max-width: 768px) {
+  
+  .header{
+    height: 620px;
+  }
+
+  .main_body{
+    height: 500px;
+  }
+
+  .main_body .container{
+    height: 310px;
+  }
+
+  .community {
+    height: 550px;
+  }
+  .community .container div{
+    height: 820px;
+    display: inline-block;
+  }
+
+  #global-section{
+    display: none;
+  }
+
+  #footer{
+    height: 400px ;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .header{
+    height: 720px;
+  }
+
+  .main_body{
+    height: 815px;
+  }
+
+  .main_body .container{
+    height: 630px;
+  }
+
+  .community {
+    height: 550px;
+  }
+  .community .container div{
+    height: 500px;
+   }
+
+  #global-section{
+    display: none;
+  }
+
+  #globe{
+    display: none;
+  }
+
+  #footer{
+    height: 400px ;
+
+  }
+}

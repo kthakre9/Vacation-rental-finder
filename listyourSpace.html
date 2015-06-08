@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>List your Space Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" media="all">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+
+	<script>
+	$(document).ready(function(){
+        $("#howIt").bind("click", function(){
+        $("#collapseDiv").fadeIn("slow");
+    });
+
+        
+        $("#remove").bind("click", function(){
+          $("#collapseDiv").fadeOut("slow");
+        });
+        
+
+        
+		$(window).scroll( function(){
+        /* Check the location of each desired element */
+        	$('.scrollCommunity').each( function(i){  
+            	var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            	var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            	if( bottom_of_window > bottom_of_object ){  
+                	$(this).animate({'opacity':'1'},500);       
+            	}
+        	}); 
+    	});  
+	
+
+	$(function() {
+      var availableTags = [
+  
+      "Apartment",
+      "Room",
+      "Bed and Breakfast",
+      "Loft",
+      "Villa",
+      "Cabin",
+      "Dorm",
+      "Boat",
+      "Plane",
+      "Island",
+      "Hut"
+    ];
+    $( "#apt" ).autocomplete({
+      source: availableTags
+    });
+  });
+
+	$(function() {
+      var availableTags = [
+  
+      "Entire Home/Apt",
+      "Private Room",
+      "Shared Room"
+    ];
+    $( "#room" ).autocomplete({
+      source: availableTags
+    });
+  });
+
+	$(function() {
+      var availableTags = [
+  
+      "Portland",
+      "New York",
+      "Washington D.C.",
+      "Niagara Falls",
+      "Chicago",
+      "San Fransisco",
+      "Seatlle",
+      "Orlando",
+      "Miami",
+      "las Vegas"
+    ];
+    $( "#loc" ).autocomplete({
+      source: availableTags
+    });
+  });
+
+	$('#apt, #room, #sel1, #loc, #comment').bind('keyup', function() {
+    if(allFilled()) $('#listSpace').removeAttr('disabled');
+});
+
+function allFilled() {
+    var filled = true;
+    $('#Addlist input').each(function() {
+        if($(this).val() == '') filled = false;
+    });
+    return filled;
+}
+
+$(function() {
+	$("#tooltip-1").tooltip();
+});
+
+});
+</script>
+
+</head>
+<body>
+
+	<div id="collapseDiv">
+  <div class="container">
+    <div class="removeIcon">
+      <a href="#" id="remove">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="images/capture.jpg" alt="Generic placeholder image" width="140" height="200">
+              <h3>Discover Amazing Places</h3>
+              <p>Find hosts with extra rooms, entire homes, and unique accommodations like castles and igloos.</p>
+            </div>
+            <div class="col-md-4" >
+              <img src="images/capture1.jpg" alt="Generic placeholder image" width="140" height="200">
+              <h3>Book a Stay</h3>
+              <p>Connect with hosts, confirm travel dates, and pay—all through Airbnb’s trusted services.</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/capture2.jpg" alt="Generic placeholder image" width="140" height="200">
+              <h3>Travel</h3>
+              <p>Feel at home, anywhere you go in the world. Learn more about how to travel on Airbnb.</p>
+          </div>
+         </div><!-- row div ends-->
+         <div class="row">
+          <div class="col-md-12">
+            <p>Learn more about hosting on Airbnb and show your guests they’re right where they belong.</p>
+          </div>
+         </div><!-- row div ends-->
+        </div><!-- container community div ends-->  
+</div><!-- collapse div ends-->
+
+	<div class="header">
+		<nav class="navbar">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>                        
+	          </button>
+	        </div><!-- navbar header div ends-->
+	        <div class="collapse navbar-collapse" id="myNavbar">
+	        	<ul class="nav navbar-nav">
+		            <li><a href="customerHome.html"> <img src="images/logo.png"> </a></li>
+		            <li><a href="#" id="tooltip-1" title="Messages"><span class="glyphicon glyphicon-envelope"><span class="badge">4</span></span></a></li>
+		            <li><a href="#" id="tooltip-1" title="Notifications"><span class="glyphicon glyphicon-globe"><span class="badge">2</span></a></li>
+		            <!--  <li><a href="#sec1" data-toggle="modal" data-target="#login_modal"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li> -->
+		            <!--  <li><a href="#sec2" data-toggle="modal" data-target="#signup_modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+	        	</ul>
+
+		        <ul class="nav navbar-nav navbar-right">
+		        	<li><a href="#collapseDiv" id="howIt" id="tooltip-1" title="Find more on how the website works">How it Works</a></li>
+	            	<!--<li><a href="listyourSpace.html">List your space</a></li>-->
+					<li><a href="index.html" id="tooltip-1" title="Log out of the site"> Log Out</a></li>
+		        </ul>
+	        </div><!-- collapse navbar-collapse div ends-->
+	      </div><!-- container div ends-->
+	    </nav>
+
+	    <div class="main_text">
+	    	<div class="container">
+	    		<h1>List Your Space</h1>
+	    		<p>Airbnb lets you make money renting out your place.</p>
+	  		</div>
+		</div>
+
+		</div><!-- header div ends-->
+	
+		<div class="container form-search" id="Addlist">
+			<form id="add_space">
+				<div class="row">
+					<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	            		<div>
+	               			<h3>Home Type</h3>
+	            		</div>
+	        		</div>
+	        
+	        		<div class="col-md-6">
+	            		<input type="text" placeholder="Apartment Type?" size="30" class="form-control" id="apt" required autofocus id="tooltip-1" title="Enter your Apartment type">
+	          		</div>
+
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	            		<div>
+	               			<h3>Room Type</h3>
+	            		</div>
+	        		</div>
+	        
+	        		<div class="col-md-6">
+						<input type="text" placeholder="Room type?" size="30" class="form-control" id="room" required id="tooltip-1" title="Enter your Room type">
+					</div>
+	            
+	          	
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	            		<div>
+	               			<h3>Accomodates</h3>
+	            		</div>
+	        		</div>
+	        
+	        		<div class="col-md-6">
+			            	<select class="form-control" id="sel1" id="tooltip-1" title="Select number of guests that can be accomodated">
+	            			<option>1 Guest</option>
+				            <option>2 Guest</option>
+				            <option>3 Guest</option>
+				            <option>4 Guest</option>
+				            </select>        		
+	          		</div>
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	            		<div>
+	               			<h3>Location</h3>
+	            		</div>
+	        		</div>
+	        
+	        		<div class="col-md-6">
+						<input type="text" placeholder="Location?" size="30" class="form-control" id="loc" required id="tooltip-1" title="Enter your location">
+					</div>
+	          		
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	        			<h3>Photos</h3>
+	        		</div>
+	        		<div class="col-md-6">
+	        			<div class="form-group">
+			          		<input type="file" id="exampleInputFile" id="tooltip-1" title="Upload photos of your listing">
+	          		</div>
+	          	</div>
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2">
+	        			<h3>Description</h3>
+	        		</div>
+	        		<div class="col-md-6">
+	        			<div class="form-group">
+			          		<textarea class="form-control" rows="10" id="comment" required id="tooltip-1" title="Enter some description for your listing"></textarea>
+	          		</div>
+	          	</div>
+	          		<div class="col-md-2"></div>
+	          	</div><!-- row div ends-->
+
+
+	          	<div class="row">
+	          		<div class="col-md-2"></div>
+	        		<div class="col-md-2"></div>
+		          	<div class="col-md-6">
+		          		<button type="button" class="btn btn-default form-control" id="listSpace" data-toggle="modal" data-target="#AddListing_modal" disabled>Add Listing</button>
+		          	</div>
+		          	<div class="col-md-2"></div>
+			</form><!--form ends-->
+	    </div>
+	</div>
+	
+
+	<div id="footer" class="container-brand-dark footer-surround footer-container">
+	    	<div class="footer-content-container page-container-responsive">
+	    		<div class="row row-condensed">
+	          		<div class="col-md-3 col-md-offset-1">
+	            		<div class="language-curr-picker clearfix">
+	            			<div class="select select-large select-block row-space-2">
+				                <select class="language-selector form-control">          
+				                  <option value="de">Deutsch</option>
+				                  <option value="en" selected="">English</option> 
+				                  <option value="es">Español</option>
+				                  <option value="fr">Français</option>
+				                  <option value="it">Italiano</option>
+				                  <option value="pl">Polski</option>
+				                  <option value="pt">Português</option>
+				                  <option value="tr">Türkçe</option>
+				                  <option value="zh-TW">中文 (繁體)</option>
+				                  <option value="ja">日本語</option>
+				                  <option value="ko">한국어</option>
+				              </select>
+	            			</div><!-- select select-large select-block row-space-2 div ends-->
+
+		            		<div class="select select-large select-block row-space-2">
+				             	<select class="currency-selector form-control">
+					                <option value="AUD">AUD</option>
+					                <option value="CHF">CHF</option>
+					                <option value="CNY">CNY</option>
+					                <option value="CRC">CRC</option>
+					                <option value="CZK">CZK</option>
+					                <option value="DKK">DKK</option>
+					                <option value="EUR">EUR</option>
+					                <option value="GBP">GBP</option>
+					                <option value="HKD">HKD</option>
+					                <option value="INR">INR</option>
+					                <option value="JPY">JPY</option>
+					                <option value="USD" selected="">USD</option>
+					                <option value="VND">VND</option>
+					                <option value="ZAR">ZAR</option>
+				            	</select>
+		          			</div><!--select select-large select-block row-space-2 div ends-->
+
+	          				<div class="cx-number"></div>
+	          			</div><!-- language-curr-picker clearfix div ends-->
+	   				</div><!-- col-md-3 col-md-offset-1 div ends-->
+
+	   				<div class="col-md-2 col-md-offset-1 hide-sm">
+	   					<ul style="list-style-type:none">
+	   						<li><h5>Company</h5></li>
+					        <li><a href="#">About</a></li>
+					        <li><a href="#">Careers</a></li>
+					        <li><a href="#">Press</a></li>
+					        <li><a href="#">Blog</a></li>
+					        <li><a href="#">Help</a></li>
+					        <li><a href="#">Policies</a></li>
+					        <li><a href="#">Disaster Response</a></li>
+					        <li><a href="#">Terms &amp; Privacy</a></li>
+					    </ul>
+	    			</div><!-- col-md-2 col-md-offset-1 hide-sm div ends-->
+
+				    <div class="col-md-2 hide-sm">
+				    	<ul style="list-style-type:none">
+				    		<li><h5>Discover</h5></li>
+					        <li><a href="#">Trust &amp; Safety</a></li>
+					        <li><a href="#">Invite Friends</a></li>
+					        <li><a href="#">Airbnb Picks</a></li>
+					        <li><a href="#">Mobile</a></li>
+					        <li><a href="#">Support NYC</a></li>
+					        <li><a href="#">Business Travel</a></li>
+					        <li><a href="#">Site Map</a></li>
+					    </ul>
+				    </div><!-- col-md-2 hide-sm div ends-->
+
+				    <div class="col-md-2 hide-sm">
+				    	<ul style="list-style-type:none">
+				    		<li><h5>Hosting</h5></li>
+					        <li><a href="#">Why Host</a></li>
+					        <li><a href="#">Hospitality</a></li>
+					        <li><a href="#">Responsible Hosting</a></li>
+					        <li><a href="#">Home Safety</a></li>
+					        <li><a href="#">Stories</a></li>
+				      	</ul>
+				    </div><!-- col-md-2 hide-sm div ends-->
+				</div><!-- row row-condensed div ends-->
+			</div><!-- footer-content-container page-container-responsive div ends-->
+		</div><!-- footer div ends-->
+
+<!-- Add Listing Modal -->
+	<div class="modal fade" id="AddListing_modal" role="dialog">
+   	 <div class="modal-dialog">
+ <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" id="closeModal"></button>
+				  <h4 class="modal-title">Save Listing</h4>
+				</div><!-- modal-header div ends-->
+        				
+        <div class="modal-body">
+          <h2>Listing has been saved!!</h2>
+        </div><!-- modal-body div ends-->
+
+       	<div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.href='customerHome.html'">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+</body>
+</html>

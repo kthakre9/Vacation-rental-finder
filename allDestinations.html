@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>All Destinations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" media="all">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+	<script>
+	    $(document).ready(function(){
+	        $("#howIt").bind("click", function(){
+	        	$("#collapseDiv").fadeIn("slow");
+	    	});
+	        
+	        $("#remove").bind("click", function(){
+	        	$("#collapseDiv").fadeOut("slow");
+	    	});
+	        
+			$(window).scroll( function(){
+	        /* Check the location of each desired element */
+	        	$('.scrollCommunity').each( function(i){  
+	            	var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+	            	var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            /* If the object is completely visible in the window, fade it it */
+	            	if( bottom_of_window > bottom_of_object ){  
+	                	$(this).animate({'opacity':'1'},500);       
+	            	}
+	        	}); 
+	    	});  
+		});
+  	</script>
+</head>
+<body>
+
+	<div id="collapseDiv">
+		<div class="container">
+			<div class="removeIcon">
+				<a href="#" id="remove">
+					<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<img src="images/capture.jpg" alt="Generic placeholder image" width="140" height="200">
+              		<h3>Discover Amazing Places</h3>
+              		<p>Find hosts with extra rooms, entire homes, and unique accommodations like castles and igloos.</p>
+            	</div>
+
+            	<div class="col-md-4" >
+              		<img src="images/capture1.jpg" alt="Generic placeholder image" width="140" height="200">
+              		<h3>Book a Stay</h3>
+              		<p>Connect with hosts, confirm travel dates, and pay—all through Airbnb’s trusted services.</p>
+            	</div>
+
+            	<div class="col-md-4">
+	            	<img src="images/capture2.jpg" alt="Generic placeholder image" width="140" height="200">
+	              	<h3>Travel</h3>
+	              	<p>Feel at home, anywhere you go in the world. Learn more about how to travel on Airbnb.</p>
+          		</div>
+         	</div><!-- row div ends-->
+
+         	<div class="row">
+         		<div class="col-md-12">
+         			<p>Learn more about hosting on Airbnb and show your guests they’re right where they belong.</p>
+          		</div>
+         	</div><!-- row div ends-->
+        </div><!-- container community div ends-->  
+	</div><!-- collapse div ends-->
+
+	<div class="header" id="header_listing">
+	<nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div><!-- navbar header div ends-->
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="customerHome.html"> <img src="images/logo.png"> </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"><span class="badge">4</span></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-globe"><span class="badge">2</span></a></li>
+
+        <!--  <li><a href="#sec1" data-toggle="modal" data-target="#login_modal"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li> -->
+        <!--  <li><a href="#sec2" data-toggle="modal" data-target="#signup_modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+		 
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#collapseDiv" id="howIt">How it Works</a></li>
+            <li><a href="listyourSpace.html">List your space</a></li>
+			<li><a href="index.html"> Log Out</a></li>
+          </ul>
+        </div><!-- collapse navbar-collapse div ends-->
+      </div><!-- container div ends-->
+</nav>
+</div>
+
+	<div class="main_body" id="allDest">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3" style="background-image:url(images/part1.jpg); width:300px; height:300px;">
+					<h3><a href="portlandListing003.html">PORTLAND</a></h3>
+				</div>
+				<div class="col-md-9" style="background-image:url(images/part2.jpg); width:600px; height:300px;">
+					<h3><a href="nycListing001.html">New York</a></h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4" style="background-image:url(images/part3.jpg); width:300px; height:300px;">
+					<h3><a href="washingtonListing004.html">Washington DC</a></h3>
+				</div>
+				<div class="col-md-4" style="background-image:url(images/part4.jpg); width:300px; height:300px;">
+					<h3><a href="">NIAGARA FALLS</a></h3>
+				</div>
+				<div class="col-md-4" style="background-image:url(images/part5.jpg); width:300px; height:300px;">
+					<h3><a href="">CHICAGO</a></h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-9" style="background-image:url(images/part6.jpg); width:600px; height:300px;">
+					<h3><a href="">SAN FRANCISCO</a></h3>
+				</div>
+				<div class="col-md-3" style="background-image:url(images/part8.jpg); width:300px; height:300px;">
+					<h3><a href="">ORLANDO</a></h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4" style="background-image:url(images/part7.jpg); width:300px; height:300px;">
+					<h3><a href="">SEATTLE</a></h3>
+				</div>
+				<div class="col-md-4" style="background-image:url(images/part9.jpg); width:300px; height:300px;">
+					<h3><a href="">MIAMI</a></h3>
+				</div>
+				<div class="col-md-4" style="background-image:url(images/part10.jpg); width:300px; height:300px;">
+					<h3><a href="">LAS VEGAS</a></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pagination_align">
+		<ul class="pagination">
+			<li class="active"><a href="allDestinations.html">1</a></li>
+		    <li><a href="allDestination2.html">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+  		</ul>
+	</div>
+
+	<div id="footer" class="container-brand-dark footer-surround footer-container">
+    	<div class="footer-content-container page-container-responsive">
+    		<div class="row row-condensed">
+          		<div class="col-md-3 col-md-offset-1">
+            		<div class="language-curr-picker clearfix">
+            			<div class="select select-large select-block row-space-2">
+			                <select class="language-selector form-control">          
+			                  <option value="de">Deutsch</option>
+			                  <option value="en" selected="">English</option> 
+			                  <option value="es">Español</option>
+			                  <option value="fr">Français</option>
+			                  <option value="it">Italiano</option>
+			                  <option value="pl">Polski</option>
+			                  <option value="pt">Português</option>
+			                  <option value="tr">Türkçe</option>
+			                  <option value="zh-TW">中文 (繁體)</option>
+			                  <option value="ja">日本語</option>
+			                  <option value="ko">한국어</option>
+			              </select>
+            			</div><!-- select select-large select-block row-space-2 div ends-->
+
+	            		<div class="select select-large select-block row-space-2">
+			             	<select class="currency-selector form-control">
+				                <option value="AUD">AUD</option>
+				                <option value="CHF">CHF</option>
+				                <option value="CNY">CNY</option>
+				                <option value="CRC">CRC</option>
+				                <option value="CZK">CZK</option>
+				                <option value="DKK">DKK</option>
+				                <option value="EUR">EUR</option>
+				                <option value="GBP">GBP</option>
+				                <option value="HKD">HKD</option>
+				                <option value="INR">INR</option>
+				                <option value="JPY">JPY</option>
+				                <option value="USD" selected="">USD</option>
+				                <option value="VND">VND</option>
+				                <option value="ZAR">ZAR</option>
+			            	</select>
+	          			</div><!--select select-large select-block row-space-2 div ends-->
+
+          				<div class="cx-number"></div>
+          			</div><!-- language-curr-picker clearfix div ends-->
+   				</div><!-- col-md-3 col-md-offset-1 div ends-->
+
+   				<div class="col-md-2 col-md-offset-1 hide-sm">
+   					<ul style="list-style-type:none">
+   						<li><h5>Company</h5></li>
+				        <li><a href="#">About</a></li>
+				        <li><a href="#">Careers</a></li>
+				        <li><a href="#">Press</a></li>
+				        <li><a href="#">Blog</a></li>
+				        <li><a href="#">Help</a></li>
+				        <li><a href="#">Policies</a></li>
+				        <li><a href="#">Disaster Response</a></li>
+				        <li><a href="#">Terms &amp; Privacy</a></li>
+				    </ul>
+    			</div><!-- col-md-2 col-md-offset-1 hide-sm div ends-->
+
+			    <div class="col-md-2 hide-sm">
+			    	<ul style="list-style-type:none">
+			    		<li><h5>Discover</h5></li>
+				        <li><a href="#">Trust &amp; Safety</a></li>
+				        <li><a href="#">Invite Friends</a></li>
+				        <li><a href="#">Airbnb Picks</a></li>
+				        <li><a href="#">Mobile</a></li>
+				        <li><a href="#">Support NYC</a></li>
+				        <li><a href="#">Business Travel</a></li>
+				        <li><a href="#">Site Map</a></li>
+				    </ul>
+			    </div><!-- col-md-2 hide-sm div ends-->
+
+			    <div class="col-md-2 hide-sm">
+			    	<ul style="list-style-type:none">
+			    		<li><h5>Hosting</h5></li>
+				        <li><a href="#">Why Host</a></li>
+				        <li><a href="#">Hospitality</a></li>
+				        <li><a href="#">Responsible Hosting</a></li>
+				        <li><a href="#">Home Safety</a></li>
+				        <li><a href="#">Stories</a></li>
+			      	</ul>
+			    </div><!-- col-md-2 hide-sm div ends-->
+			</div><!-- row row-condensed div ends-->
+		</div><!-- footer-content-container page-container-responsive div ends-->
+	</div><!-- footer div ends-->
+
+	<!-- log In Modal -->
+	<div class="modal fade" id="login_modal" role="dialog">
+   	 <div class="modal-dialog">
+ <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Log In</h4>
+				</div><!-- modal-header div ends-->
+        				
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+      				<label class="control-label col-sm-2" for="email">Email:</label>
+      					<div class="col-sm-10">
+      						<input type="email" class="form-control" id="email" placeholder="Enter email">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">
+     					<label class="control-label col-sm-2" for="pwd">Password:</label>
+      					<div class="col-sm-10">          
+        					<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">        
+      				<div class="col-sm-offset-2 col-sm-10">
+        				<div class="checkbox">
+          				<label><input type="checkbox"> Remember me</label>
+        				</div><!-- checkbox div ends-->
+      				</div><!-- col-sm-offset-2 col-sm-10 div ends-->
+   	 				</div><!-- form-group div ends-->
+
+    				<div class="form-group">        
+     				 <div class="col-sm-offset-2 col-sm-10">
+       					<button type="submit" class="btn btn-default">Submit</button>
+      				</div><!-- col-sm-offset-2 col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+  				</form>
+        </div><!-- modal-body div ends-->
+
+       	<div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+  <!-- Sign up Modal -->
+	<div class="modal fade" id="signup_modal" role="dialog">
+   	<div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Sign Up</h4>
+				</div><!-- modal-header div ends-->
+
+        <div class="modal-body">
+        	<form class="form-horizontal" role="form">
+            <div class="form-group">
+      				<label class="control-label col-sm-2" for="name">First Name:</label>
+      					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="fname" placeholder="Enter First Name">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">
+      				<label class="control-label col-sm-2" for="name">Last Name:</label>
+      					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">
+      				<label class="control-label col-sm-2" for="email">Email:</label>
+      					<div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">
+     					<label class="control-label col-sm-2" for="pwd">Password:</label>
+      					<div class="col-sm-10">          
+        					<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">
+     					<label class="control-label col-sm-2" for="pwd">Password:</label>
+      					<div class="col-sm-10">          
+        					<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      					</div><!-- col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+
+    				<div class="form-group">        
+      				<div class="col-sm-offset-2 col-sm-10">
+        				<div class="checkbox">
+          				<label><input type="checkbox"> Remember me</label>
+        				</div><!-- checkbox div ends-->
+      				</div><!-- col-sm-offset-2 col-sm-10 div ends-->
+   	 				</div><!-- form-group div ends-->
+
+    				<div class="form-group">        
+     					<div class="col-sm-offset-2 col-sm-10">
+       					<button type="submit" class="btn btn-default">Submit</button>
+      				</div><!-- col-sm-offset-2 col-sm-10 div ends-->
+    				</div><!-- form-group div ends-->
+          </form>
+        </div><!-- modal-body div ends-->
+
+        <div class="modal-footer">
+       	 	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div><!-- modal-footer div ends-->
+      </div><!-- modal-content div ends-->
+    </div><!-- modal-dialog div ends-->
+  </div><!-- modal fade div ends-->
+
+
+</body>
+</html>
